@@ -1,7 +1,7 @@
 """
 Tic Tac Toe Game
 Author: Satria Dwi Cahya
-Purpose: 
+Purpose: Memahami cara membuat sebuah matriks 3x3 dengan list dan loop; menambah, menghapus, dan menampilkan item di sebuah list.
 """
 # Modul untuk memberikan warna pada teks
 import os
