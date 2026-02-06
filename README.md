@@ -1,4 +1,4 @@
-# Python Practice Repository
+# Simple Python Program 
 
 Personal repository for practicing Python programming.
 Focus on basic logic, small projects, and long-term improvement.
