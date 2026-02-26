@@ -1,26 +1,29 @@
-# Simple Python Program 
+# Python: Core to Advanced
 
-Personal repository for practicing Python programming.
-Focus on basic logic, small projects, and long-term improvement.
+A comprehensive Python learning repository structured to evolve from beginner to advanced level.
 
-## Purpose
-- Practice Python fundamentals
-- Improve programming logic
-- Store small projects in one place
+---
 
-## Structure
-- `mini_projects/` : Small standalone projects
-- `data_structures/` : Data structure practice
-- `experiments/` : Free exploration
-- `notes/` : Personal notes & reminders
+## 📚 Learning Path
 
-## Rules
-- One project = one folder
-- Keep code simple and readable
+1. Fundamentals
+2. Data Structures
+3. Algorithms
+4. Object-Oriented Programming
+5. Small & Intermediate Projects
+6. Advanced Topics (Async, Multiprocessing, Decorators)
 
-## Tools
-- Language: Python
-- Editor: VS Code
+---
 
-## Status
-Ongoing – continuously updated.
+## 🧠 Why This Repository?
+
+This repository serves as:
+- A coding journal
+- A technical growth tracker
+- A reference for Python implementation patterns
+
+---
+
+## 🔬 Testing Practice
+
+All major implementations include unit tests inside the `testing/` directory.
