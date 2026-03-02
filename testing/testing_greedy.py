@@ -1,33 +1,35 @@
-def greedy_coin_change(amount, denominations):
+def greedy_coin(uang_pecahan, total_uang):
     result = {}
-    total_coins = 0
+    banyak_uang_pecahan_terpakai = 0
+    
+    for uang in uang_pecahan:
+        if total_uang >= uang:
+            cout = total_uang // uang
 
-    for coin in denominations:
-        if amount >= coin:
-            count = amount // coin
-            amount -= count * coin
-            result[coin] = count
-            total_coins += count
+            result[uang] = cout
 
-    return result, total_coins
+            total_uang -= cout * uang 
 
+            banyak_uang_pecahan_terpakai += cout
+
+    
+    return result, banyak_uang_pecahan_terpakai
+
+def display_output(result, total):
+
+    for uang, indeks in result.items():
+        print(f'Rp {uang:<7} : Terpakai {indeks}x')
+
+    print('Total lembar terpakai: ', total)
 
 def main():
-    denominations = [100000, 50000, 20000, 10000, 5000, 2000, 1000]
-    
-    amount = int(input("Masukkan jumlah kembalian: "))
+    uang_pecahan = [100000, 50000, 20000, 10000, 5000, 2000, 1000]
 
-    if amount <= 0:
-        print("Jumlah harus lebih dari 0")
-        return
+    total_uang = 98000
 
-    result, total = greedy_coin_change(amount, denominations)
+    uang_pecahan, total = greedy_coin(uang_pecahan, total_uang)
 
-    print("\nRincian kembalian:")
-    for coin, count in result.items():
-        print(f"{coin:<7} : {count} lembar")
-
-    print(f"\nTotal uang terpakai: {total} lembar/koin")
+    display_output(uang_pecahan, total)
 
 
 if __name__ == "__main__":
