@@ -1,9 +1,8 @@
-nilai_dosen = 96
-if nilai_dosen >= 90:
-    kategori_nilai = "Sangat Baik"
-elif nilai_dosen >= 75:
-    kategori_nilai = "Baik"
-elif nilai_dosen >= 60:
-    kategori_nilai = "Cukup"
-else:
-    kategori_nilai = "Perlu Belajar Lagi"
+for nomor_ke in range(1, 10):
+    print(f"Perulangan ke-{nomor_ke}")
+
+# Output:
+# Perulangan ke-1
+# Perulangan ke-2
+# ...
+# Perulangan ke-9
