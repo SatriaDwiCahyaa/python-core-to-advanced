@@ -11,9 +11,8 @@ def welcome_sign():
     print("  TUGAS 3 - PENGULANGAN ANGKA 1 - 15")
     print("=" * 45)
 
-
+# FOR LOOP 
 def pengulangan_for():
-    # --- FOR LOOP ---
     print("\n[A] Menggunakan FOR loop:")
     total_for = 0
     for x in range(1, 16):
@@ -21,9 +20,9 @@ def pengulangan_for():
         total_for += x
     print(f"  Total (for) = {total_for}")
 
-
+# WHILE LOOP
 def pengulangan_while():
-    # --- WHILE LOOP ---
+    
     print("\n[B] Menggunakan WHILE loop:")
     x = 1
     total_while = 0
@@ -33,9 +32,8 @@ def pengulangan_while():
         x += 1
     print(f"  Total (while) = {total_while}")
 
-
+# DO-WHILE (simulasi dengan while True + break) 
 def pengulangan_do_while():
-    # --- DO-WHILE (simulasi dengan while True + break) ---
     print("\n[C] Menggunakan DO-WHILE (while True + break):")
     x = 1
     total_dowhile = 0
