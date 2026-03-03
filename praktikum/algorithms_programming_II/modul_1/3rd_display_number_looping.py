@@ -5,11 +5,14 @@ os.system('cls')
 # TUGAS 3: Pengulangan Angka 1–15 & Total
 # ─────────────────────────────────────────────
 
-def jenis_pengulangan():
+
+def welcome_sign():
     print("=" * 45)
     print("  TUGAS 3 - PENGULANGAN ANGKA 1 - 15")
     print("=" * 45)
 
+
+def pengulangan_for():
     # --- FOR LOOP ---
     print("\n[A] Menggunakan FOR loop:")
     total_for = 0
@@ -18,6 +21,8 @@ def jenis_pengulangan():
         total_for += x
     print(f"  Total (for) = {total_for}")
 
+
+def pengulangan_while():
     # --- WHILE LOOP ---
     print("\n[B] Menggunakan WHILE loop:")
     x = 1
@@ -28,6 +33,8 @@ def jenis_pengulangan():
         x += 1
     print(f"  Total (while) = {total_while}")
 
+
+def pengulangan_do_while():
     # --- DO-WHILE (simulasi dengan while True + break) ---
     print("\n[C] Menggunakan DO-WHILE (while True + break):")
     x = 1
@@ -40,9 +47,14 @@ def jenis_pengulangan():
             break
     print(f"  Total (do-while) = {total_dowhile}\n")
 
+
 def main():
-    jenis_pengulangan()
+    welcome_sign()
+    pengulangan_for()
+    pengulangan_while()
+    pengulangan_do_while()
     input()
+
 
 if __name__ == "__main__":
     main()
