@@ -13,7 +13,8 @@ def welcome_sign():
 
 # FOR LOOP 
 def pengulangan_for():
-    print("\n[A] Menggunakan FOR loop:")
+    print("\nFOR loop:")
+    
     total_for = 0
     for x in range(1, 16):
         print(f"  Angka ke-{x}: {x}")
@@ -22,8 +23,8 @@ def pengulangan_for():
 
 # WHILE LOOP
 def pengulangan_while():
-    
-    print("\n[B] Menggunakan WHILE loop:")
+    print("\nWHILE loop:")
+
     x = 1
     total_while = 0
     while x <= 15:
@@ -34,7 +35,8 @@ def pengulangan_while():
 
 # DO-WHILE (simulasi dengan while True + break) 
 def pengulangan_do_while():
-    print("\n[C] Menggunakan DO-WHILE (while True + break):")
+    print("\nDO-WHILE (while True + break):")
+    
     x = 1
     total_dowhile = 0
     while True:
