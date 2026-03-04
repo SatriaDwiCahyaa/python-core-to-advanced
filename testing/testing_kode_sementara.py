@@ -1,10 +1,14 @@
-import os
+from colorama import Fore, Back, Style
+import colorama
 
-# Membersihkan layar pada Windows
-os.system("cls")
+# Mengubah warna teks menjadi merah
+print(Fore.RED + "Ini teks berwarna merah")
 
-# Membersihkan layar pada Linux/Mac
-os.system("clear")
+# Mengubah warna teks menjadi hijau dengan latar kuning
+print(Fore.GREEN + Back.YELLOW + "Teks hijau, latar kuning")
 
-# Pendekatan lintas platform
-os.system("cls" if os.name == "nt" else "clear")
+# Mereset semua pengaturan warna ke default
+print(Style.RESET_ALL)
+
+# Contoh penggunaan dalam validasi input
+print(Fore.RED + "Error: Input tidak valid.", Style.RESET_ALL)
