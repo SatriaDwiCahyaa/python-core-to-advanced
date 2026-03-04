@@ -1,15 +1,10 @@
-try:
-    # Kode yang berpotensi menimbulkan exception
-    angka = int(input("Masukkan angka: "))
-except ValueError:
-    # Menangani exception ValueError
-    print("Input tidak valid. Harap masukkan angka.")
-except Exception as e:
-    # Menangani exception lainnya
-    print(f"Terjadi kesalahan: {e}")
-else:
-    # Dieksekusi jika tidak ada exception
-    print(f"Angka yang dimasukkan: {angka}")
-finally:
-    # Selalu dieksekusi
-    print("Proses selesai.")
+import os
+
+# Membersihkan layar pada Windows
+os.system("cls")
+
+# Membersihkan layar pada Linux/Mac
+os.system("clear")
+
+# Pendekatan lintas platform
+os.system("cls" if os.name == "nt" else "clear")
