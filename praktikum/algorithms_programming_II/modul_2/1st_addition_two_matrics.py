@@ -1,3 +1,6 @@
+# ─────────────────────────────────────────────
+# TUGAS 1: Penjumlahan 2 Matriks 2x3
+# ─────────────────────────────────────────────
 def welcome_sign():
     print("=" * 50)
     print("  TUGAS 1 - PENJUMLAHAN MATRIKS A + B (2x3)")
