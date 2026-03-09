@@ -1,3 +1,6 @@
+# ─────────────────────────────────────────────
+# TUGAS 3: Mengurutkan Bilangan - Divide & Conquer (Merge Sort)
+# ─────────────────────────────────────────────
 def welcome_sign():
     print("=" * 50)
     print("  TUGAS 3 - PENGURUTAN DENGAN DIVIDE AND CONQUER")
