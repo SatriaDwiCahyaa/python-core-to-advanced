@@ -1,3 +1,6 @@
+# ─────────────────────────────────────────────
+# TUGAS 2: Lengkapi Class MyInput
+# ─────────────────────────────────────────────
 def welcome_sign():
     print("=" * 50)
     print("  TUGAS 2 - CLASS MyInput")
