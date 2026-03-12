@@ -20,7 +20,8 @@ def binarySearch(sumber_data, target):
     return -1
 
 def main():
-    data = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19] # Data harus urut ascending/descending - binary search
+    # Data harus urut ascending/descending - binary search
+    data = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19] 
     target = 8
 
     hasil = binarySearch(data, target)
