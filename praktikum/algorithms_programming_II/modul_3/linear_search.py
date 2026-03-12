@@ -3,8 +3,8 @@
 # =================
 
 def linearSearch(sumber_data, target):
-    for i in range(len(sumber_data)):
-        if sumber_data[i] == target:
+    for i, data in enumerate(sumber_data):
+        if data == target:
             return i
     return -1
 
@@ -20,4 +20,4 @@ def main():
         print(f"{target} tidak ditemukan.")
 
 if __name__ == "__main__":
-   main()
+    main()
