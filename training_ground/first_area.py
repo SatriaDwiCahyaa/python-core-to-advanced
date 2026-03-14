@@ -2,45 +2,48 @@ import os
 os.system('cls')
 
 
-def linear_search(data, target):
-
-    for i, data in enumerate(data):
-        if data == target:
-            return i
-
-    return -1
-        
-def binary_search(data, target):
+def binary_search(sumber_data, target):
     kiri = 0
-    kanan = len(data)
+    kanan = len(sumber_data) - 1
+
+    ascending = sumber_data[kiri] < sumber_data[kanan]
 
     while kiri <= kanan:
         tengah = (kiri + kanan) // 2
 
-        if data[tengah] == target:
+        if sumber_data[tengah] == target:
             return tengah
-        elif data[tengah] < target:
-            kiri = tengah + 1
+        if ascending:
+            if sumber_data[tengah] < target:
+                kiri = tengah + 1
+            else:
+                kanan = tengah - 1
         else:
-            kanan = tengah - 1
-
+            if sumber_data[tengah] < target:
+                kanan = tengah - 1
+            else:
+                kiri = tengah + 1
     return -1
 
-def pemeriksa(data, target):
+def pemeriksa():
+    # Data urut ascending/descending
+    data = sorted([213, 34, 45, 423, 43, 54, 23, 45, 56, 78], reverse=True)
+    target = 23
+
+    # Binary
     hasil = binary_search(data, target)
-    
+
+    # Print Data
+    print(f'Data: {data}')
+
     if hasil != -1:
-        print(f'{target} ditemukan pada indeks ke-{hasil} atau urutan ke-{hasil + 1}')
+        print(f'\n{target} ditemukan pada indeks ke-{hasil} atau urutan ke-{hasil + 1}')
     else:
         print(f'{target} tidak ditemukan.')
 
-
 def main():
-    data = sorted([10, 23, 34, 12, 34, 56, 87, 54, 32, 545, 67, 54, 43], reverse=False)
+    pemeriksa()
+    input()
 
-    print(data)
-    target = 43
-
-    pemeriksa(data, target)
-
-main()
+if __name__ == "__main__":
+    main()
