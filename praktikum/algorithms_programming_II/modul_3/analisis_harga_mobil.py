@@ -1,13 +1,21 @@
-# ============================================================
+# =======================
 #  MODUL 3 - SEARCHING
-# ============================================================
+# =======================
 
-# ─────────────────────────────────────────────
+# ─────────────────────────────────
 # TUGAS 1: DATA PRODUK & HARGA
-# ─────────────────────────────────────────────
+# ─────────────────────────────────
 produk = [
-    "Jaguar", "Lamborghini", "Honda", "Audi",      "Suzuki",
-    "Mazda",  "Daihatsu",   "Ford",  "Hyundai",   "Mitsubishi"
+    "Jaguar", 
+    "Lamborghini", 
+    "Honda", 
+    "Audi",      
+    "Suzuki",
+    "Mazda", 
+    "Daihatsu",   
+    "Ford",  
+    "Hyundai",   
+    "Mitsubishi"
 ]
 
 harga = [
@@ -24,33 +32,35 @@ harga = [
 ]
 
 
-# ─────────────────────────────────────────────
+# ───────────────────────────────
 # Tampilkan seluruh data array
-# ─────────────────────────────────────────────
+# ───────────────────────────────
 def tugas1_tampil_data():
-    print("=" * 55)
+    print()
+    print("=" * 47)
     print("  TUGAS 1 - DATA PRODUK & HARGA")
-    print("=" * 55)
+    print("=" * 47)
     print(f"  {'No':<4} {'Produk':<15} {'Harga (Rp)'}")
     print(f"  {'─'*4} {'─'*15} {'─'*20}")
+
     for i in range(len(produk)):
-        print(f"  {i:<4} {produk[i]:<15} Rp {harga[i]:>20,.0f}")
-    print()
+        print(f"  {i + 1:<4} {produk[i]:<15} Rp {harga[i]:>20,.0f}")
 
 
 # ─────────────────────────────────────────────
 # TUGAS 2: Cari "Audi" dan tampilkan lokasinya
 # ─────────────────────────────────────────────
 def tugas2_cari_audi():
-    print("=" * 55)
+    print()
+    print("=" * 45)
     print("  TUGAS 2 - PENCARIAN PRODUK 'AUDI'")
-    print("=" * 55)
+    print("=" * 45)
 
     target   = "Audi"
     ditemukan = False
 
     # Sequential Search
-    for i in range(len(produk)):
+    for i, _ in enumerate(produk):
         if produk[i] == target:
             print(f"\n  Produk '{target}' DITEMUKAN!")
             print(f"  Lokasi di array  : indeks ke-{i}")
@@ -60,16 +70,16 @@ def tugas2_cari_audi():
 
     if not ditemukan:
         print(f"\n  Produk '{target}' tidak ditemukan.")
-    print()
 
 
 # ─────────────────────────────────────────────
 # TUGAS 3: Urutkan harga dari termurah ke termahal
 # ─────────────────────────────────────────────
 def tugas3_urutkan_harga():
+    print()
     print("=" * 55)
     print("  TUGAS 3 - PRODUK DIURUTKAN BERDASARKAN HARGA")
-    print("        (Termurah → Termahal)")
+    print("                (Termurah → Termahal)         ")
     print("=" * 55)
 
     # Buat pasangan (harga, produk) lalu urutkan
@@ -78,40 +88,35 @@ def tugas3_urutkan_harga():
 
     print(f"\n  {'Rank':<6} {'Produk':<15} {'Harga (Rp)'}")
     print(f"  {'─'*6} {'─'*15} {'─'*20}")
-    for rank, (h, p) in enumerate(pasangan, start=1):
-        print(f"  {rank:<6} {p:<15} Rp {h:>20,.0f}")
-    print()
-
-    return pasangan  # Dikembalikan untuk dipakai Tugas 4
+    for rank, (h, p) in enumerate(pasangan):
+        print(f"  {rank + 1:<6} {p:<15} Rp {h:>20,.0f}")
 
 
-# ─────────────────────────────────────────────
+# ────────────────────────────────────────────
 # TUGAS 4: Harga produk termurah nomor ke-2
-# ─────────────────────────────────────────────
+# ────────────────────────────────────────────
 def tugas4_termurah_kedua():
+    print()
     print("=" * 55)
     print("  TUGAS 4 - PRODUK TERMURAH NOMOR KE-2")
     print("=" * 55)
 
-    # Urutkan terlebih dahulu
     pasangan = list(zip(harga, produk))
-    pasangan.sort(key=lambda x: x[0])
+    pasangan.sort(key=lambda x: x[0])  
 
     h_termurah2, p_termurah2 = pasangan[1]  # indeks 1 = urutan ke-2
 
-    print(f"\n  Produk Termurah #1 : {pasangan[0][1]:<15} Rp {pasangan[0][0]:,.0f}")
-    print(f"  Produk Termurah #2 : {p_termurah2:<15} Rp {h_termurah2:,.0f}")
-    print()
+    print(f"  Produk Termurah ke-2 : {p_termurah2:<15} Rp {h_termurah2:,.0f}")
 
 
-# ─────────────────────────────────────────────
+# ─────────────────────
 # MENU UTAMA MODUL 3
-# ─────────────────────────────────────────────
+# ─────────────────────
 def main():
     while True:
         print("\n========================================")
-        print("   MODUL 3 - SEARCHING")
-        print("========================================")
+        print("      MODUL 3 - CARS SEARCHING            ")
+        print("==========================================")
         print("  [1] Tugas 1 - Tampilkan Semua Data")
         print("  [2] Tugas 2 - Cari Produk 'Audi'")
         print("  [3] Tugas 3 - Urutkan Harga")
